@@ -106,20 +106,20 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+
       arr.push(value);
     
   };
 
-const addNumbers = (num, arr, times, callback) => {
+const addNumbers = (num, arr, times, addValues) => {
   // Solution code here...
-  let modifiedArray = [];
-  arr.forEach(element => {
-    while( times != 0){
-    callback = addValues(arr, num);
+  
+    for(let index = 0; index < times; index++) {
+      
+    addValues(arr,num);
     }
-    modifiedArray.push(element);
     
-  });
+  
   
   return modifiedArray;
 };
@@ -146,7 +146,7 @@ const createList = (availableItems) => {
   // Solution code here...
   let newArray = [];
   availableItems.forEach(element => {
-    if (element.available == 'true'){
+    if (element.available === true){
     newArray.push(element.name);}
     
   });
