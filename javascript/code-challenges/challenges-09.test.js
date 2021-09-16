@@ -45,8 +45,8 @@ a value and returns true if the value is in the object.
 const checkValues = (obj, value) => {
 
   if( Object.values(obj).includes(value)  ) 
-
-return true;
+    {return true;}
+    else{ return false;}
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,15 +159,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (characters, character) => {
-  let childArray = [];
+  let childFlag = false ;
    characters.forEach(obj => {
-    if (obj.name === character){
-   let childrenIndex = Object.keys(obj).indexOf('children');
-     (childrenIndex >= 0) && (Object.values(obj)[childrenIndex]);
-      
+    if (obj.name === character && obj.children){
+         
+      childFlag = true;
     }
   });
-  return childArray.length > 0? true : false;
+  return childFlag;
   }
 
 /* ------------------------------------------------------------------------------------------------
