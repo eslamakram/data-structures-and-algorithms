@@ -12,7 +12,7 @@ The position to add/remove items. Negative values a the position from the end of
 
 function returnTen(str){
   let stringArr = str.split("");
-let arr = stringArr.splice(10,stringArr.length-10); 
+let arr = stringArr.splice(-10); 
    return arr;
 
 }
@@ -101,22 +101,37 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
+
+  let sum = new Array(12+1).join('0').split('').map(parseFloat)
+for (let i = 0; i < stores.length; i++) {
+for (let j = 0; j < stores[i].length; j++) {
+    sum[j] = sum[j] + cookieStores[i][j];
+}
+ }
+return sum;
 
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+Pat has decided that he would also like to organize his data as objects containing the number 
+of cookies sold per hour and the time.
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses forEach to iterate 
+over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let newArray = [];
+  let i = 0;
+  data.forEach(element => {
+    newArray.push({ sales: `${element} cookies`, time: hours[i] });
+    i++;
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +158,8 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let indexOfitems = arr[2];
+  return indexOfitems.items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
