@@ -62,9 +62,9 @@ Return either true or false.
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 
-constccc => {
+const validateEmail = (email) => {
   // Solution code here...
-  return(/^[-a-z0-9~!$%^&*_=+\'?] (\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*/)? true : false
+  return /^([\w]+|[\w]+\.[\w]+)@([\w]+\.)+((com)|(net)|(org))$/.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,7 +89,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  return /^(\((\d{3})\)[\s]?|(\d{3})[\s-]?)(\d{3})[\s-]?(\d{4})$/.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
