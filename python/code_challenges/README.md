@@ -1,13 +1,11 @@
-# Reverse an Array
-<!-- Description of the challenge -->
-In this challange we should Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available in python , return an array with elements in reversed order.
+# Code Challanges  401-code-Python
 
-## Whiteboard Process
-<!-- Embedded whiteboard image -->
-![my solution](codeCHalleng1.png)
+## Table of Content
 
-## Approach & Efficiency
-<!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
-i used recursion approach .
-sapce Complexity: O(1) becaouse we dont use buffer
-Time Complexity: O(n/2) becouse we interating over half of array length.
+
+| Name | Challenge|
+| --- | ----------- |
+| Reverse Array | [Ch01](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-reverse/README) |
+| Insert Shift Array | [Ch02](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-insert-shift/README) |
+| Binary Search Array | [Ch03](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-reverse/README) |
+
