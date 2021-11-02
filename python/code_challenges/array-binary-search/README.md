@@ -1,15 +1,18 @@
 # Code Challange 03
 
-## Insert to Middle of an Array
+## Binary Search of Sorted Array
 
-There is an array and value that want to insert it in the middle index in given array and then shift other elements.
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key and returns the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
+
+input: a sorted array and the search key
+output: intger number that indicates the index of sreach key , or -1 if that isnt in the array
 
 ## Whiteboard Process
 
-![codeCh2](codeChallange2.drawio.png)
+![codeCh3](ch2.png)
 
 ## Approach & Efficiency
 
-iterations and assign new array
+used search algorithm
 
 <https://github.com/eslamakram/data-structures-and-algorithms/pull/22>

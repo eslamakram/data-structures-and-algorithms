@@ -2,10 +2,8 @@
 
 ## Table of Content
 
-
 | Name | Challenge|
 | --- | ----------- |
-| Reverse Array | [Ch01](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-reverse/README) |
-| Insert Shift Array | [Ch02](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-insert-shift/README) |
-| Binary Search Array | [Ch03](https://eslamakram.github.io/data-structures-and-algorithms/python/code_challenges/array-reverse/README) |
-
+| Reverse Array | [Ch01](https://github.com/eslamakram/data-structures-and-algorithms/tree/main/python/code_challenges/array-reverse) |
+| Insert Shift Array | [Ch02](https://github.com/eslamakram/data-structures-and-algorithms/tree/main/python/code_challenges/array-insert-shift) |
+| Binary Search Array | [Ch03](https://github.com/eslamakram/data-structures-and-algorithms/tree/main/python/code_challenges/array-reverse/README.md) |
