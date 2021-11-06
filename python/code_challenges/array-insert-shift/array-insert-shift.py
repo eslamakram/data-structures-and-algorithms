@@ -1,18 +1,31 @@
-array = [2,4,6,-8]
-addedValue = 5
-
 
 def array_insert_shift(array,addedValue):
-    middleIndex = int(len(array)/2)
-    result =[0]
-    for i in range(middleIndex+1):
-       result[i]= array[i]
-       result[middleIndex]= addedValue
-       for j in range(middleIndex+1,int(len(array))):
-           result[j]= array[j-1]
+
+    # end = len(array)
+    middleIndex = len(array)//2
+    # array =array + [0]
+    # while end >= middleIndex:
+    #    array[end]= array[end-1]
+    #    end -=1
+
+    #    array[-middleIndex]= addedValue
+
+    result = [0]*(len(array)+1)
+    for i in range( middleIndex):
+        result[i] = array[i]
+    result[middleIndex] = addedValue
+    for j in range(middleIndex +1 , len(result)):
+        result[j] = array[j -1]
+
     return result
 
-array_insert_shift(array,addedValue)
+
+
+if __name__ == "__main__":
+
+  array = [2,4,6,-8]
+  addedValue = 5
+print(array_insert_shift(array,addedValue))
 
 
 
