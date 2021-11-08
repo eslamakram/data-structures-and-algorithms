@@ -60,6 +60,23 @@ class Linked_List:
             new_node.next = current_node.next
             current_node.next = new_node
 
+    def kthFromEnd(self,k):
+        current = self.head
+        # Index of current node
+        count = 0
+
+        # Loop while end of linked list is not reached
+        while (current):
+            if (count == k):
+                return current.value
+            count += 1
+            current = current.next
+
+        # if we get to this line, the caller was asking
+        # for a non-existent element so we assert fail
+        assert(Exception)
+        return 0
+
 
 
 

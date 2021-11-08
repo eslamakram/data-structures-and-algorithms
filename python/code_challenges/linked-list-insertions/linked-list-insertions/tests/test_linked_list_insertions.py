@@ -53,6 +53,11 @@ def test_insert_node_after_first_ll(ll):
      actual = ll.__str__()
      assert expected == actual
 
+def test_kth_From_End(ll):
+    expected = 1
+    actual = print( ll.kthFromEnd(7))
+    assert expected == actual
+
 @pytest.fixture
 def ll():
     ll = Linked_List()
