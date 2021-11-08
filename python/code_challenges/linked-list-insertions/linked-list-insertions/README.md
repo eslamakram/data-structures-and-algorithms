@@ -15,6 +15,8 @@ Output : Return the node’s value that is k places from the tail of the linked 
 
 ## Whiteboard Process
 
+![kthfromend](../ch07.drawio.png)
+
 ## Approach & Efficiency
 
 insert After:
