@@ -66,18 +66,13 @@ class Linked_List:
         count = 0
 
         # Loop while end of linked list is not reached
-        while (current):
+        while (current.next is not None):
             if (count == k):
+                current = current.next
+                count += 1
                 return current.value
-            count += 1
-            current = current.next
-
-        # if we get to this line, the caller was asking
-        # for a non-existent element so we assert fail
-        assert(Exception)
-        return 0
-
-
+            elif count > k:
+                 print('Location is out of the length of LinkedList')
 
 
     def __str__(self):
