@@ -19,9 +19,8 @@ Output : Return the node’s value that is k places from the tail of the linked 
 
 ## Approach & Efficiency
 
-insert After:
 The approach was searching for the value with while loop.
-Big O: O(n), since my condition in while loop is while self.head is true (is not none) do traversing. there is another way to do it as o(1) but i did not did it.
+Big O: O(n).
 
 ## Solution
 
