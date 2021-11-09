@@ -75,7 +75,32 @@ class Linked_List:
                  print('Location is out of the length of LinkedList')
 
 
-    def __str__(self):
+def linked_list_zip(self, list1 , list2):
+            if list1.head is None:
+                return list2
+            if list2.head is None:
+                return list1
+            while list1.next & list2.next :
+                    current = list1.head
+                    temp = list2.head
+
+                    if current is not None:
+                       list1.head = list2.head
+                    else:
+
+                        while temp:
+
+                                temp2 = current.next
+                                current.next = temp
+                                temp = temp2
+
+
+                    current = current.next
+                    return list1
+
+
+
+def __str__(self):
         # "head -> 1 -> 2 -> 3 -> 4 -> None"
         output = "Head -> "
         if self.head is None:
@@ -95,17 +120,22 @@ class Linked_List:
 
 if __name__ == "__main__":
      Linked_List_test = Linked_List()
+     Linked_list_zipped = Linked_List()
 
      Linked_List_test.append(1)
      Linked_List_test.append(1)
      Linked_List_test.append(1991)
      Linked_List_test.append("welcome")
 
-     print (Linked_List_test.Insert_Before_Item(1991,4))
-     print (Linked_List_test.Insert_After_Item(1991,"Ansam"))
+     Linked_list_zipped.append(2)
+     Linked_list_zipped.append(3)
+     Linked_list_zipped.append('eslam')
 
+    #  print (Linked_List_test.Insert_Before_Item(1991,4))
+    #  print (Linked_List_test.Insert_After_Item(1991,"Ansam"))
+    #  print(Linked_List_test)
 
-     print(Linked_List_test)
+     print(linked_list_zip(Linked_List_test,Linked_list_zipped))
 
 
 
