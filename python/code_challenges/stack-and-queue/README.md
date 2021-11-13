@@ -1,8 +1,8 @@
 # Stack and Queue
 
-A stack is a data structure that consists of Nodes. The order is First In Last Out (FILO).
+A stack  order is First In Last Out (FILO).
 
-A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO)
+A Queue order is First In First Out (FIFO)
 
 ## Challenge
 
@@ -51,4 +51,4 @@ all methods in stack and queue take O(1)
 
 #### API
 
-Pull Rquest : 
+Pull Rquest : https://github.com/eslamakram/data-structures-and-algorithms/pull/31
