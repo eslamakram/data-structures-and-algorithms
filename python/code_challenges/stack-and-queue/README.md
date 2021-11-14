@@ -51,4 +51,17 @@ all methods in stack and queue take O(1)
 
 #### API
 
-Pull Rquest : https://github.com/eslamakram/data-structures-and-algorithms/pull/31
+Pull Rquest : <https://github.com/eslamakram/data-structures-and-algorithms/pull/31>
+
+## Stack-queue-pseudo challange
+
+### Whiteboard Process
+
+![CH11](CH11.png)
+
+#### Approach & Efficiency
+
+defind class called PseudoQueue
+i used two stacks as an input, to create the Queue.
+The complixity of time O(1) and space O(1) for Enqueue
+The complixity of time O(n) and space O(n) for Dequeue
