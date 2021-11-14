@@ -68,13 +68,13 @@ def test_peek_queue(queue):
     actual = queue.peek()
     assert expected == actual
 
-# def test_empty_queue(queue):
-#     queue.dequeue()
-#     queue.dequeue()
-#     queue.dequeue()
-#     actual = queue.is_empty()
-#     expected = True
-#     assert expected == actual
+def test_empty_queue(queue):
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+    actual = queue.is_empty()
+    expected = True
+    assert expected == actual
 
 def test_empty_instantiate_queue():
     queue = Queue()
