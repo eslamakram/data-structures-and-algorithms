@@ -16,10 +16,10 @@ class PseudoQueue:
 
 if __name__ == "__main__":
     testQueue=PseudoQueue()
-    testQueue.enqueue(3)
-    testQueue.enqueue(4)
-    testQueue.enqueue(6)
-    testQueue.enqueue(7)
+    testQueue.enqueue(1991)
+    testQueue.enqueue(1)
+    testQueue.enqueue(1)
+    testQueue.enqueue("Tolay")
     print(testQueue.dequeue())
     print(testQueue.dequeue())
     print(testQueue.dequeue())
