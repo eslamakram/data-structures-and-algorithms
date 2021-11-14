@@ -87,7 +87,7 @@ class Queue:
         else:
             temp = self.front
             self.front = self.front.next
-            self.front.next = None
+            temp.next = None
             return temp.value
 
     def peek(self):
