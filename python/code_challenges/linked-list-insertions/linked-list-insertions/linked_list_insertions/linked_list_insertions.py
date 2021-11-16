@@ -1,6 +1,6 @@
 
 class Node:
-    def __init__(self,value):
+    def __init__(self, value):
         self.value = value
         self.next = None
 
@@ -9,7 +9,7 @@ class Linked_List:
     def __init__(self):
         self.head = None
 
-    def append (self,value):
+    def append(self, value):
         node = Node(value)
 
         if self.head is None:
@@ -17,12 +17,10 @@ class Linked_List:
         else:
             currentNode = self.head
             while currentNode.next != None:
-                  currentNode = currentNode.next
+                currentNode = currentNode.next
             currentNode.next = node
 
-
-
-    def Insert_After_Item(self,item,data):
+    def Insert_After_Item(self, item, data):
         node = self.head
         while node is not None:
             if node.value == item:
@@ -34,7 +32,6 @@ class Linked_List:
             new_node = Node(data)
             new_node.next = node.next
             node.next = new_node
-
 
     def Insert_Before_Item(self, item, data):
         if self.head is None:
@@ -60,7 +57,7 @@ class Linked_List:
             new_node.next = current_node.next
             current_node.next = new_node
 
-    def kthFromEnd(self,k):
+    def kthFromEnd(self, k):
         current = self.head
         # Index of current node
         count = 0
@@ -72,35 +69,9 @@ class Linked_List:
                 count += 1
                 return current.value
             elif count > k:
-                 print('Location is out of the length of LinkedList')
+                print('Location is out of the length of LinkedList')
 
-
-def linked_list_zip(self, list1 , list2):
-            if list1.head is None:
-                return list2
-            if list2.head is None:
-                return list1
-            while list1.next & list2.next :
-                    current = list1.head
-                    temp = list2.head
-
-                    if current is not None:
-                       list1.head = list2.head
-                    else:
-
-                        while temp:
-
-                                temp2 = current.next
-                                current.next = temp
-                                temp = temp2
-
-
-                    current = current.next
-                    return list1
-
-
-
-def __str__(self):
+    def __str__(self):
         # "head -> 1 -> 2 -> 3 -> 4 -> None"
         output = "Head -> "
         if self.head is None:
@@ -116,27 +87,127 @@ def __str__(self):
             return output
 
 
+def linked_list_zip(list1, list2):
+    """
+       ll3 = LinkedList()
+    current1 = ll1.head
+    current2 = ll2.head
+    # ll1 head -> [1] -> [3] -> [2] -> X
+    # ll2 head -> [5] -> [9] -> [4] -> X
+    # head -> 1 -> 5 -> 3 -> 2-> X
+    # temp -> 9 -> 4 -> X
+    while (current1 or current2):
+        # move every node in ll2 to be after every node in ll1
+        pass
+    """
+    if list1.head is None:
+        return str(list2)
+    if list2.head is None:
+        return str(list1)
+
+    # if only one node in first list
+    # simply point its head to second list
+    if (list1.next == None) :
+        list1.next = list2
+        return str(list1)
+    """
+    # Initialize current and next pointers of
+    # both lists
+    curr1 = h1
+    next1 = h1.next
+    curr2 = h2
+    next2 = h2.next
+
+    while (next1 != None and curr2 != None):
+
+        # if curr2 lies in between curr1 and next1
+        # then do curr1.curr2.next1
+        if ((curr2.data) >= (curr1.data) and
+            (curr2.data) <= (next1.data)) :
+            next2 = curr2.next
+            curr1.next = curr2
+            curr2.next = next1
+
+            # now let curr1 and curr2 to point
+            # to their immediate next pointers
+            curr1 = curr2
+            curr2 = next2
+
+        else :
+            # if more nodes in first list
+            if (next1.next) :
+                next1 = next1.next
+                curr1 = curr1.next
+
+            # else point the last node of first list
+            # to the remaining nodes of second list
+            else :
+                next1.next = curr2
+                return h1
+
+    return h1"""
+
+    while (current1 or current2):
+          current1 = list1.head
+          current2 = list2.head
+          if current1 is not None:
+             current1.head = list2.head
+          else:
+            while current2:
+                temp = current1.next
+                current1.next = current2
+                current2 = temp
+
+                current1 = current1.next
+                current2 = current2.next
+    return (list1.__str__())
+
+
+def ispalindrome(head):
+    temp = head
+    list2 = Linked_List()
+    flag_is_palin = True
+    while temp != None:
+        list2.append(temp.value)
+        temp = temp.next
+
+        while head != None:
+            item = temp.pop()
+
+            if head.value == item:
+                flag_is_palin = True
+            else:
+                flag_is_palin = False
+                break
+            head = head.next
+    return flag_is_palin
+
+
 
 
 if __name__ == "__main__":
-     Linked_List_test = Linked_List()
-     Linked_list_zipped = Linked_List()
+    Linked_List_test1 = Linked_List()
+    Linked_list_test2 = Linked_List()
 
-     Linked_List_test.append(1)
-     Linked_List_test.append(1)
-     Linked_List_test.append(1991)
-     Linked_List_test.append("welcome")
+    Linked_List_test1.append(1)
+    Linked_List_test1.append(2)
+    Linked_List_test1.append(2)
+    Linked_List_test1.append(1)
 
-     Linked_list_zipped.append(2)
-     Linked_list_zipped.append(3)
-     Linked_list_zipped.append('eslam')
+    Linked_list_test2.append(2)
+    Linked_list_test2.append(3)
+    Linked_list_test2.append('eslam')
 
     #  print (Linked_List_test.Insert_Before_Item(1991,4))
     #  print (Linked_List_test.Insert_After_Item(1991,"Ansam"))
     #  print(Linked_List_test)
+    print('this is the first list')
+    print(Linked_List_test1.__str__())
+    print("***********************************")
+    print('this is the 2nd list')
+    print(Linked_list_test2.__str__())
+    print("***********************************")
+    y = linked_list_zip(Linked_List_test1,Linked_list_test2)
+    print(y)
 
-     print(linked_list_zip(Linked_List_test,Linked_list_zipped))
-
-
-
-
+    # print(ispalindrome(Linked_List_test))

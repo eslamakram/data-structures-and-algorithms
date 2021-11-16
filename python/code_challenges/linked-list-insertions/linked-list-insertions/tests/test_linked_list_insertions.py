@@ -1,6 +1,6 @@
 from linked_list_insertions import __version__
 
-from linked_list_insertions.linked_list_insertions import Node, Linked_List
+from linked_list_insertions.linked_list_insertions import Node, Linked_List, ispalindrome,linked_list_zip
 
 import pytest
 
@@ -53,10 +53,31 @@ def test_version():
 #      actual = ll.__str__()
 #      assert expected == actual
 
-def test_kth_From_End(ll):
-    expected = 1
-    actual = print( ll.kthFromEnd(5))
-    assert expected == actual
+# def test_kth_From_End(ll):
+#     expected = 1
+#     actual = print( ll.kthFromEnd(5))
+#     assert expected == actual
+
+def test_zipLists():
+    expected='Head -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> None'
+    ll =Linked_List()
+    ll2 =Linked_List()
+    ll.append(1)
+    ll.append(3)
+    ll.append(5)
+    ll.append(7)
+    ll2.append(2)
+    ll2.append(4)
+    ll2.append(6)
+    ll2.append(8)
+    actual= linked_list_zip(ll,ll2)
+    assert actual==expected
+
+# def test_ispalindrome_true(ll2):
+#     expected = True
+#     actual = print(ispalindrome(ll2))
+#     assert expected == actual
+
 
 @pytest.fixture
 def ll():
@@ -67,3 +88,11 @@ def ll():
     ll.append(6)
     ll.append(7)
     return ll
+
+# @pytest.fixture
+# def ll2():
+#     ll2 =Linked_List()
+#     ll2.append('D')
+#     ll2.append('A')
+#     ll2.append('D')
+#     return ll2

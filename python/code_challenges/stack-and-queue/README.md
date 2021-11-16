@@ -70,7 +70,7 @@ The complixity of time O(n) and space O(n) for Dequeue
 
 ### Whiteboard Process
 
-![CH11](CH11.png)
+![CH13](ch13.drawio.png)
 
 #### Approach & Efficiency
 
@@ -84,4 +84,4 @@ Round Brackets : ()
 Square Brackets : []
 Curly Brackets : {}
 i used stack as test opening and closing brackets
-The complixity of time O(n) and space O(1) 
+The complixity of time O(n) and space O(1)

@@ -24,6 +24,7 @@ class Linked_List:
                     currentNode = currentNode.next
               currentNode.next = node
 
+
     def includes(self,value):
         include = False
         if self.head is None:
