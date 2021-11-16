@@ -65,3 +65,23 @@ defind class called PseudoQueue
 i used two stacks as an input, to create the Queue.
 The complixity of time O(1) and space O(1) for Enqueue
 The complixity of time O(n) and space O(n) for Dequeue
+
+## stack-queue-brackets challange
+
+### Whiteboard Process
+
+![CH11](CH11.png)
+
+#### Approach & Efficiency
+
+Write a function called validate brackets
+Arguments: string
+Return: boolean
+representing whether or not the brackets in the string are balanced
+There are 3 types of brackets:
+
+Round Brackets : ()
+Square Brackets : []
+Curly Brackets : {}
+i used stack as test opening and closing brackets
+The complixity of time O(n) and space O(1) 
