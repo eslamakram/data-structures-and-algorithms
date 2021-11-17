@@ -55,6 +55,33 @@ class Stack:
            return True
         return False
 
+    def __str__(self):
+        # "head -> 1 -> 2 -> 3 -> 4 -> None"
+        output = "Head -> "
+        if self.top is None:
+            output += None
+
+        else:
+            current = self.top
+            while current:
+                output += f"{current.value} -> "
+                current = current.next
+
+            output += "None"
+            return output
+
+    def max_push(self,value):
+        """
+        Arguments: value
+        """
+        if self.top == None:
+           self.push(value)
+        if value > self.peek():
+            self.pop()
+            self.push(value)
+
+
+
 class Queue:
     def __init__(self):
         self.front = None
@@ -108,3 +135,11 @@ class Queue:
         if not self.front:
             return True
         return False
+
+if __name__ == "__main__":
+   maxStack = Stack()
+   maxStack.max_push(10)
+   maxStack.max_push(5)
+   maxStack.max_push(2)
+   print( maxStack.__str__())
+
