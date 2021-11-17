@@ -72,7 +72,8 @@ class Stack:
 
     def max_push(self,value):
         """
-        Arguments: value
+        Argument: value
+        
         """
         if self.top == None:
            self.push(value)

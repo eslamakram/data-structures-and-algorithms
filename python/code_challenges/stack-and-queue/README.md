@@ -85,3 +85,14 @@ Square Brackets : []
 Curly Brackets : {}
 i used stack as test opening and closing brackets
 The complixity of time O(n) and space O(1)
+
+## stack-max challange
+
+### Whiteboard Process
+
+![CH14](ch14.drawio.png)
+
+### Approach & Efficiency
+
+ write a ‘Max Stack’ which is defined as a Stack with an additional getMax() member function which returns the ‘biggest’ element in the Stack.
+The complixity of time O(1) and space O(1)
