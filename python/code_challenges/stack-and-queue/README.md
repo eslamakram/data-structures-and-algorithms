@@ -66,6 +66,19 @@ i used two stacks as an input, to create the Queue.
 The complixity of time O(1) and space O(1) for Enqueue
 The complixity of time O(n) and space O(n) for Dequeue
 
+## stack-queue-animal-shelter challange
+
+### Whiteboard Process
+
+![CH12](ch12.drawio.png)
+#### Approach & Efficiency
+
+Create a class called AnimalShelter which holds only dogs and cats.
+The shelter operates using a first-in, first-out approach.
+i used two queues one for cat and another one for dog
+The complixity of time O(1) and space O(1) for Enqueue
+The complixity of time O(n) and space O(n) for Dequeue
+
 ## stack-queue-brackets challange
 
 ### Whiteboard Process
