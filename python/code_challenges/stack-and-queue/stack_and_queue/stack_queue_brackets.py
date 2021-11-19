@@ -1,4 +1,4 @@
-from stack_and_queue import Stack
+from stack_and_queue.stack_and_queue  import Stack
 def Multi_Bracket_Validation(str):
 
     open_brackect_list = ["(","[","{"]
@@ -21,14 +21,6 @@ def Multi_Bracket_Validation(str):
     else:
         return False
 
-# {}	TRUE
-# {}(){}	TRUE
-# ()[[Extra Characters]]	TRUE
-# (){}[[]]	TRUE
-# {}{Code}[Fellows](())	TRUE
-# [({}]	FALSE
-# (](	FALSE
-# {(})	FALSE
 
 if __name__ == "__main__":
 

@@ -9,14 +9,14 @@ class AnimalShelter:
         Arguments: animal
         animal can be either a dog or a cat object.
         """
-        if animal == 'cat' :
+        if animal.lower().startswith('cat') :
            self.cat.enqueue(animal)
 
-        elif animal=='dog' :
+        elif animal.lower().startswith('dog') :
            self.dog.enqueue(animal)
 
         else :
-          return 'The animal not in the shelf'
+             raise Exception("The animal not in the shelf")
 
     def dequeue(self, pref):
         """
@@ -25,10 +25,10 @@ class AnimalShelter:
         Return: either a dog or a cat, based on preference.
         If pref is not "dog" or "cat" then return null.
         """
-        if pref =='cat' and self.cat.front:
+        if pref.lower().startswith('cat') and self.cat.front:
            return self.cat.dequeue()
 
-        if pref =='dog'  and self.dog.front:
+        if pref.lower().startswith('dog')  and self.dog.front:
           return self.dog.dequeue()
 
         if pref =='dog' or pref =='cat':
