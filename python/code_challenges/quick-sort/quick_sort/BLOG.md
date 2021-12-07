@@ -41,4 +41,4 @@ ALGORITHM Swap(arr, i, low)
 
 ## Trace
 
-![blog](assests/quick-sort-blog.jpg)
+![blog](./ch28-trace-quick-sort.png)

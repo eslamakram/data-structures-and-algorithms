@@ -4,7 +4,7 @@ Create a function take an array , first index and last index as arguments then s
 
 ## Whiteboard Process
 
-![quick-sort-whiteboard]()
+![quick-sort-whiteboard](./quick-sort-whiteboard.png)
 
 ## Approach & Efficiency
 
