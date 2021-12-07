@@ -23,4 +23,5 @@
 | Breadth-first Traversal Tree | [Ch17](https://docs.google.com/spreadsheets/d/1-arMoKPhFg5n0qQHzsfr7oYRAGsrO7eKSYxzHaOfNDc/edit#gid=0) |
 | FizzBuzz on a k-ary tree | [Ch18](linked-list/README.md) |
 | Insertion Sort | [Ch26](https://docs.google.com/spreadsheets/d/1-arMoKPhFg5n0qQHzsfr7oYRAGsrO7eKSYxzHaOfNDc/edit#gid=0) |
+|Merge Sort|[ch27](https://github.com/eslamakram/data-structures-and-algorithms/pull/40)|
 
