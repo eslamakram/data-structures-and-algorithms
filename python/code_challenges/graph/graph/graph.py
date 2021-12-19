@@ -53,10 +53,10 @@ class Graph:
   Return: None
   """
   def __init__(self):
-    self.__adjacency_list = {}
+    self._adjacency_list = {}
 
   def __str__(self):
-        all_vertex=list(self.__adjacency_list.keys())
+        all_vertex=list(self._adjacency_list.keys())
         str=""
         for ver in all_vertex:
             str += str(ver) + " -> "
@@ -70,7 +70,7 @@ class Graph:
   """
   def add_node(self, value):
     node = Vertex(value)
-    self.__adjacency_list[node] = []
+    self._adjacency_list[node] = []
     return node
 
   """
@@ -81,14 +81,14 @@ class Graph:
   Return: None
   """
   def add_edge(self, start_vertex, end_vertex, weight=0):
-    if start_vertex not in self.__adjacency_list:
+    if start_vertex not in self._adjacency_list:
       raise KeyError("Start Vertex is not found")
 
-    if end_vertex not in self.__adjacency_list:
+    if end_vertex not in self._adjacency_list:
       raise KeyError("End Vertex is not found")
 
     edge = Edge(end_vertex , weight)
-    self.__adjacency_list[start_vertex].append(edge)
+    self._adjacency_list[start_vertex].append(edge)
 
   """
   Input : Vertex
@@ -96,7 +96,7 @@ class Graph:
   Return: a list of edges
   """
   def get_neighbors(self, vertex):
-    return self.__adjacency_list.get(vertex, [])
+    return self._adjacency_list.get(vertex, [])
 
 
 
@@ -106,7 +106,7 @@ class Graph:
   Return : a list or set of the nodes
   """
   def get_nodes(self):
-    return self.__adjacency_list.keys()
+    return self._adjacency_list.keys()
 
   """
   Input: None
@@ -114,7 +114,7 @@ class Graph:
   Return: int The size(the length of adj_list)
   """
   def size(self):
-    return len(self.__adjacency_list)
+    return len(self._adjacency_list)
 
   """
   Input: Start_vertex
@@ -122,16 +122,16 @@ class Graph:
   Return: A list of nodes
   """
   def bfs(self, start_vertex):
-    queue = Queue()
+    breadth_queue = Queue()
     result = []
     visited = set()
 
-    queue.enqueue(start_vertex)
+    breadth_queue.enqueue(start_vertex)
     visited.add(start_vertex)
-    result.append(start_vertex)
+    result.append(start_vertex.value)
 
-    while len(queue):
-      current_vertex = queue.dequeu()
+    while len(breadth_queue):
+      current_vertex = breadth_queue.dequeue()
 
       neighbors = self.get_neighbors(current_vertex)
 
@@ -139,9 +139,9 @@ class Graph:
         neighbor = edge.vertex
 
         if neighbor not in visited:
-          queue.enqueue(neighbor)
+          breadth_queue.enqueue(neighbor)
           visited.add(neighbor)
-          result.append(neighbor)
+          result.append(neighbor.value)
 
     return result
 
