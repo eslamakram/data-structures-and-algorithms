@@ -86,3 +86,31 @@ def test_graph_breadth_first():
     actual = graph.bfs(start_vertix)
     expected = ["Pandora", "Arendelle", "Metroville", "Monstroplolis", "Narnia", "Naboo"]
     assert actual == expected
+
+
+def test_graph_depth_first():
+    # Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo
+    graph = Graph()
+    # start_vertix = Vertex('Pandora')
+    # vertix2 = Vertex('Arendelle')
+    # vertix3 = Vertex('Metroville')
+    # vertix4 = Vertex('Monstroplolis')
+    # vertix5 = Vertex('Narnia')
+    # vertix6 = Vertex('Naboo')
+
+    start_vertix = graph.add_node('Pandora')
+    vertix2 = graph.add_node('Arendelle')
+    vertix3 = graph.add_node('Metroville')
+    vertix4 = graph.add_node('Monstroplolis')
+    vertix5 = graph.add_node('Narnia')
+    vertix6 = graph.add_node('Naboo')
+
+    graph.add_edge(start_vertix, vertix2)
+    graph.add_edge(vertix2, vertix3)
+    graph.add_edge(vertix2, vertix4)
+    graph.add_edge(vertix3, vertix5)
+    graph.add_edge(vertix3, vertix6)
+
+    actual = graph.depth_first(start_vertix)
+    expected = ['Pandora', 'Arendelle', 'Metroville', 'Narnia', 'Naboo', 'Monstroplolis']
+    assert actual == expected
